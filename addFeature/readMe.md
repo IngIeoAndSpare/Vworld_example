@@ -62,7 +62,6 @@ createMap.js는 단순히 addFeature.js 에 있는 함수를 다음과 같이 �
 이제 기초적인 틀이 완성되었다면 본격적으로 마커를 제작해보자!
 ```{.javascript}
     var polygonGeom = new ol.geom.Polygon([coorSet]);            //polygonGeom 객체 생성
-    });
 ```
 addFeature.js 파일의 **draw function** 내부에 보면 위와 같은 코드가 있다. 여기서 ol.geom.Polygon은 꼭지점이 있는 도형을 그리기 위한 객체로 본 예제에선 좌표 4개를 받는다.  
 ***왜 4개냐고 물으신다면 대답해드리는게 인지상정!***  
