@@ -1,26 +1,21 @@
 function createOverlay() {
-    var testPoint = [];                            //변환된 좌표를 저장할 배열
-    var inputPoint = [127.8945727, 35.7505553];    //마커가 그려질 포인트
-    testPoint.push(ol.proj.transform([inputPoint[1], inputPoint[0]], "EPSG:4326", "EPSG:3857"));
+
+    let point = [128.03739, 36.61996];
+    let convertPoint = ol.proj.transform([point[0], point[1]], "EPSG:4326", "EPSG:3857");
 
     let marker = new ol.Overlay({
-        position: testPoint,
+        position: convertPoint,
         positioning: 'center-center',
         element: document.getElementById('marker'),
         stopEvent: false
     });
     vmap.addOverlay(marker);
 
-    let overLay = new ol.Overlay({
-        position: testPoint,
+    let testOverlay = new ol.Overlay({
+        position: convertPoint,
         element: document.getElementById('test_overlay')
     });
-    vmap.addOverlay(overLay);
-
-    let popup = new ol.Overlay({
-        element: document.getElementById('popup')
-    });
-    vmap.addOverlay(popup);
+    vmap.addOverlay(testOverlay);
 }
 
 
