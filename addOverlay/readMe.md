@@ -1,5 +1,5 @@
 # 지도상 오버레이 추가하기
-이 예제는 vworld에서 간단한 오버레이를 어떻게 추가하는지 보여주는 예제이다. 오버레이의 자세한 설명은 (여기)[https://www.e-education.psu.edu/natureofgeoinfo/c9_p6.html]를 참고
+이 예제는 vworld에서 간단한 오버레이를 어떻게 추가하는지 보여주는 예제이다. 오버레이의 자세한 설명은 [여기](https://www.e-education.psu.edu/natureofgeoinfo/c9_p6.html)를 참고
 
 ## 기존 틀 파일에서 어떤게 추가되었는지 보기
 
