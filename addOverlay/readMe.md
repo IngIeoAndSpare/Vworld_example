@@ -3,7 +3,7 @@
 
 ## 기존 틀 파일에서 어떤게 추가되었는지 보기
 
-마커를 만들기 위해 [addOverlay.js](https://github.com/IngIeoAndSpare/Vworld_example/blob/master/addOverlay/addOverlay.js) 라는 정적 파일을 제작하였다.  
+오버레이를 만들기 위해 [addOverlay.js](https://github.com/IngIeoAndSpare/Vworld_example/blob/master/addOverlay/addOverlay.js) 라는 정적 파일을 제작하였다.  
 addOverlay.js 파일은 오버레이를 정의하고 이를 지도상에 추가하는 역활을 한다. 
 
 그럼 기존 틀 파일인 [index.html](https://github.com/IngIeoAndSpare/Vworld_example/blob/master/addOverlay/index.html)과 [createMap.js](https://github.com/IngIeoAndSpare/Vworld_example/blob/master/addOverlay/createMap.js) 는 어떻게 변하였는지 보자.
