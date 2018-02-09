@@ -27,7 +27,15 @@ function clickHandler(event){
     let cilckpixel = event.pixel;                           //사용자가 클릭한 지도상 픽셀 좌표
     let clickTarget = event.target;                         //사용자가 클릭한 타겟 정보
     let clickPointEvent = event.pointerEvent;               //사용자가 클릭한 포인트의 이벤트
+    
+    console.log('클릭 좌표:'+clickCoorder);
+    console.log('클릭 픽셀:'+clickpixel);
+    console.log('클릭 타겟:'+clickTarget);
+    console.log('클릭 포인트 이벤트:'+clickPointEvent);
+    
+    alert(
+    vmap.getView().getCenter(),     //사용자가 보고 있는 지도상 좌표
+    vmap.getView().getZoom()        //사용자가 보고 있는 지도상 줌 level
+    )
 
-    let viewCenterCoorder = vmap.getView().getCenter();     //사용자가 보고 있는 지도상 좌표
-    let viewZoomLevel = vmap.getView().getZoom();           //사용자가 보고 있는 지도상 줌 level
 }
