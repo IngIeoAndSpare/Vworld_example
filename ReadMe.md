@@ -56,7 +56,7 @@ div_vmap 은 html 의 div tag 중 id가 v_map이라는 것을 가리키기 위�
 div_vmap = document.getElementById('v_map');
 ```
 vmap 은 vworld 맵 객체를 가질 변수이다. 즉, vmap 이라는 변수에 map 객체를 담는다 라고 생각하면 된다.  
-그럼 정작 중요한 Vworld map 초기화는 어떻게 하는가? 다음을 그대로 사용해도 좋고 [Vworld_mapOption_문서](http://dev.vworld.kr/dev/v4dv_opn2dmap2guide_s002.do)를 참고해서 옵션을 다르게 주어도 좋다.
+그럼 정작 중요한 Vworld map 초기화는 어떻게 하는가? 다음을 그대로 사용해도 좋고 [Vworld_mapOption_문서](http://dev.vworld.kr/dev/v4dv_opn2dmap2guide_s002.do?itfIde=ITFID_07000000000004)를 참고해서 옵션을 다르게 주어도 좋다.
 
 ```{.javascript}
     vw.ol3.MapOptions = {                               //지도 초기화
