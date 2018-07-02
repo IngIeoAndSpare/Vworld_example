@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="createMap.js"></script>
+    <script type="text/javascript" src="http://map.vworld.kr/js/vworldMapInit.js.do?version=2.0&apiKey=YourAPIKEY"></script>
+    <script src="addOverlay.js"></script>
+    <link rel="stylesheet" type="text/css" href="overlayStyle.css">
+</head>
+
+<body>
+
+    <div class="vmap" id="v_map">
+        <!--이 div 영역에 맵이 들어갑니다. CreateMap.js-->
+    </div>
+
+    <a class="overlay" id="test_overlay" target="_blank" href="http://www.vworld.kr/v4po_search.do">
+        오버레이
+        <!--이 영역에 overlay lable txet 및 클릭 가능학 객체가 들어갑니다.-->
+    </a>
+    <div id="marker" title="Marker">
+        <!--이 영역에 overlay 마커가 들어갑니다.-->
+    </div>
+
+</body>
+
+</html>

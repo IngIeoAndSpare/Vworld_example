@@ -2,7 +2,8 @@
 
 Vworld 를 이용해서 이것저것 하다가 2.0 API문서와 예제가 너무 부실하기도 하고 나와 같은 ***고-통*** 을 느끼는 사람이 없기를 바램으로 만든 문서다!  
 기본적으로 [Vworld](http://map.vworld.kr/map/maps.do)는 국가에서 제공하고 있는 공간정보 오픈 플렛폼이다. 쉽게 말해서 웹-지도(네이버 지도 같은)  
-오픈레이어스를 기반으로 하였기에 오픈레이어스 예제를 조금만 변형하면 쉽게 vworld에 이용할 수 있다. 이 레파지토리는 오픈레이어스를 이용한 기초적인 예제를 보여준다.
+오픈레이어스를 기반으로 하였기에 오픈레이어스 예제를 조금만 변형하면 쉽게 vworld에 이용할 수 있다. 이 레파지토리는 오픈레이어스를 이용한 기초적인 예제를 보여준다.  
+이 예제는 2D기반의 지도를 대상으로 했다. 3D기반 예제는 시간이 되면...
 
 ## 기초 맵을 띄우기 위한 설명 
 Vworld 를 이용해서 이것저것 만들기 위해선 API key 가 필요하다. [Vworld_APIKEY](http://dev.vworld.kr/dev/v4api.do) 에 들어가면 API Key를 발급받을 수 있다.  
@@ -55,7 +56,7 @@ div_vmap 은 html 의 div tag 중 id가 v_map이라는 것을 가리키기 위�
 div_vmap = document.getElementById('v_map');
 ```
 vmap 은 vworld 맵 객체를 가질 변수이다. 즉, vmap 이라는 변수에 map 객체를 담는다 라고 생각하면 된다.  
-그럼 정작 중요한 Vworld map 초기화는 어떻게 하는가? 다음을 그대로 사용해도 좋고 [Vworld_mapOption_문서](http://dev.vworld.kr/dev/v4dv_opn2dmap2guide_s002.do)를 참고해서 옵션을 다르게 주어도 좋다.
+그럼 정작 중요한 Vworld map 초기화는 어떻게 하는가? 다음을 그대로 사용해도 좋고 [Vworld_mapOption_문서](http://dev.vworld.kr/dev/v4dv_opn2dmap2guide_s002.do?itfIde=ITFID_07000000000004)를 참고해서 옵션을 다르게 주어도 좋다.
 
 ```{.javascript}
     vw.ol3.MapOptions = {                               //지도 초기화
