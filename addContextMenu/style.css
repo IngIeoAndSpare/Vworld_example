@@ -1,0 +1,17 @@
+.contextMenu {
+    cursor: pointer;
+    background-color: #eee;
+    position: absolute;
+    border: solid 1px black;
+    width: 150px;
+}
+.contextMenu .menuItem {
+    padding: 5px;
+}
+.contextMenu .menuItem:hover {
+    background-color: #ccc;
+}
+
+.menuSeparator {
+    border-bottom: solid 1px black; 
+}
