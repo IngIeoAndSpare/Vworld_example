@@ -1,0 +1,28 @@
+.contextMenu {
+    cursor: pointer;
+    background-color: #eee;
+    position: absolute;
+    border: solid 1px black;
+    width: 150px;
+}
+.contextMenu .menuItem {
+    padding: 5px;
+}
+.contextMenu .menuItem:hover {
+    background-color: #ccc;
+}
+
+.menuSeparator {
+    border-bottom: solid 1px black;	
+}
+
+.overlay {
+    text-decoration: none;
+    color: #3a3838;
+    font-size: 11pt;
+    font-weight: bold;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    padding: 0.2em;
+    background-color: rgba(255,255,255,0.3);
+    border: 1px solid rgba(255,255,255,0.8);
+}
