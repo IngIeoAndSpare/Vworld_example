@@ -1,6 +1,6 @@
 # 지도상 마커 추가하기
 
-## 삭제해라 애송 읍읍 기존 틀 파일에서 어떤게 추가되었는지 보기
+## 기존 틀 파일에서 어떤게 추가되었는지 보기
 
 마커를 만들기 위해 [addMarker.js](https://github.com/IngIeoAndSpare/Vworld_example/blob/master/addMarker/addMarker.js) 라는 정적 파일을 제작하였다.  
 addMarker.js 파일은 마커를 정의하고 이를 지도상에 추가하는 역활을 한다. 
