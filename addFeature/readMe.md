@@ -26,13 +26,13 @@ createMap.js는 단순히 addFeature.js 에 있는 함수를 다음과 같이 �
 
 ## 본격적으로 도형을 그리기
 
-도형을 생성하기 위해선 도형이 표시될 좌표와 지도에 도형을 정의할 틀 [ol.Feature](https://openlayers.org/en/latest/apidoc/ol.Feature.html) 그리고 물체 틀 중에 도형을 그릴 틀[ol.style.Stroke](https://openlayers.org/en/latest/apidoc/ol.style.Stroke.html), [ol.style.Fill](https://openlayers.org/en/latest/apidoc/ol.style.Fill.html)이 필요하다.  
+도형을 생성하기 위해선 도형이 표시될 좌표와 지도에 도형을 정의할 틀 [ol.Feature](https://openlayers.org/en/latest/apidoc/module-ol_Feature-Feature.html) 그리고 물체 틀 중에 도형을 그릴 틀[ol.style.Stroke](https://openlayers.org/en/latest/apidoc/module-ol_style_Stroke-Stroke.html), [ol.style.Fill](https://openlayers.org/en/latest/apidoc/module-ol_style_Fill-Fill.html)이 필요하다.  
 
 * ol.Feature 은 이 물체에 도형을 그릴 것이다! 라고 정의하는 것이다. 정확히 말하자면 물체이지만!
 * ol.style.Stroke 는 도형을 그리기 위한 꼭지점들을 연결해주는 선이다! 
 * ol.style.Fill 은 그 내부를 색칠해주는 객체이다! 
 
-이 위에 말고 또 필요한게 있다! 바로 [vectorLayer](https://openlayers.org/en/latest/apidoc/ol.layer.Vector.html) 와 [vectorSource](http://openlayers.org/en/v3.6.0/apidoc/ol.source.Vector.html)이다. 각각 설명은 다음과 같다
+이 위에 말고 또 필요한게 있다! 바로 [vectorLayer](https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html) 와 [vectorSource](https://openlayers.org/en/latest/apidoc/module-ol_source_Vector-VectorSource.html)이다. 각각 설명은 다음과 같다
 * vectorLayer 는 지도 위에 겹쳐지는 투우명한 레이어이다. 
 * vectorSource 는 그 투명한 레이어에 그림을 그릴 수 있는 도구라 생각하면 된다.
 
@@ -48,7 +48,7 @@ createMap.js는 단순히 addFeature.js 에 있는 함수를 다음과 같이 �
                     ]; //도형이 그려질 좌표
 ```
 알다시피 [x, y] 좌표이다. 혹시 좌표계를 모른다면 [지도에 쓰이는 좌표계](http://www.osgeo.kr/17)문서를 참고하면 된다.
-그리고 이 좌표계는 EPSG:3857 이기에 이를 EPSG:4326로 변환하기 위해 [ol.proj](http://openlayers.org/en/latest/apidoc/ol.proj.html) 기능을 사용해서 변환할 것이다.
+그리고 이 좌표계는 EPSG:3857 이기에 이를 EPSG:4326로 변환하기 위해 [ol.proj](https://openlayers.org/en/latest/apidoc/module-ol_proj.html) 기능을 사용해서 변환할 것이다.
 ```{.javascript}
     ol.proj.transform([item[1], item[0]], "EPSG:4326", "EPSG:3857");
 ```
@@ -105,7 +105,7 @@ min 은 최소를 뜻하고 max는 최대를 뜻한다. 즉, x값은 오른쪽�
 ```
 
 바로 스타일을 지정해준다. 여기서 스타일은 feature 의 색, 윤곽선을 지정해준다. 자세히 보면 **stroke** 라는 속성에 new ol.style.Stroke와 fill에 new ol.style.Fill을 지정한 것을 볼 수 있다.  
-물론 단순하게 색을 칠하는게 아니라 이미지를 넣고 싶다! 라고 하신다면 fill 의 속성이나 style 속성을 참고하자 자세한 것은 [ol.style](https://openlayers.org/en/latest/apidoc/ol.style.html)을 참고.    
+물론 단순하게 색을 칠하는게 아니라 이미지를 넣고 싶다! 라고 하신다면 fill 의 속성이나 style 속성을 참고하자 자세한 것은 [ol.style.fill](https://openlayers.org/en/latest/apidoc/module-ol_style_Fill-Fill.html) 을 참고.    
 이렇게 만든 스타일은 feature.setStlye() 을 통해 지정할 수 있다. (예시에선 feature.setStyle(style);)
 
 자! 이제 우리는 feature 를 생성해고 세부적으로 style 까지 지정해주었으면 이제 뭘 해야될까?
