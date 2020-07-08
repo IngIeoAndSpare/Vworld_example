@@ -26,12 +26,12 @@ createMap.js는 단순히 addMarker.js 함수를 다음과 같이 추가했을 �
 
 ## 본격적으로 마커를 만들기
 
-마커를 생성하기 위해선 마커가 표시될 좌표와 지도에 붙일 물체 틀 [ol.Feature](https://openlayers.org/en/latest/apidoc/ol.Feature.html) 그리고 물체 틀 중에 마커 틀[ol.style.icon](https://openlayers.org/en/latest/apidoc/ol.style.Icon.html)이 필요하다.  
+마커를 생성하기 위해선 마커가 표시될 좌표와 지도에 붙일 물체 틀 [ol.Feature](https://openlayers.org/en/latest/apidoc/module-ol_Feature-Feature.html) 그리고 물체 틀 중에 마커 틀[ol.style.icon](https://openlayers.org/en/latest/apidoc/module-ol_style_Icon-Icon.html)이 필요하다.  
 붕어빵 틀과 타꼬야끼 틀을 생각하면 편하다.
 * ol.Feature 은 붕어빵 틀이건 타꼬야끼 틀이건 구워내는 틀 전부를 뜻한다고 생각하면 된다. (비유가 어려우면 물병이라고 생각하고)
 * ol.style.icon 은 저 구워내는 틀중 붕어빵 틀 아니면 타꼬야키 틀이라는 구체적인 틀을 지정한다. (얘는 그 중 콜라병이라고 생각하면 된다.)  
 
-이 위에 말고 또 필요한게 있다! 바로 [vectorLayer](https://openlayers.org/en/latest/apidoc/ol.layer.Vector.html) 와 [vectorSource](http://openlayers.org/en/v3.6.0/apidoc/ol.source.Vector.html)이다. 각각 설명은 다음과 같다
+이 위에 말고 또 필요한게 있다! 바로 [vectorLayer](https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html) 와 [vectorSource]((https://openlayers.org/en/latest/apidoc/module-ol_source_Vector-VectorSource.html)이다. 각각 설명은 다음과 같다
 * vectorLayer 는 지도 위에 겹쳐지는 투우명한 레이어이다. 
 * vectorSource 는 그 투명한 레이어에 그림을 그릴 수 있는 도구라 생각하면 된다.
 
@@ -44,7 +44,7 @@ createMap.js는 단순히 addMarker.js 함수를 다음과 같이 추가했을 �
 var inputPoint = [127.8945727, 35.7505553];
 ```
 알다시피 [x, y] 좌표이다. 혹시 좌표계를 모른다면 [지도에 쓰이는 좌표계](http://www.osgeo.kr/17)문서를 참고하면 된다.
-그리고 이 좌표계는 EPSG:3857 이기에 이를 EPSG:4326로 변환하기 위해 [ol.proj](http://openlayers.org/en/latest/apidoc/ol.proj.html) 기능을 사용해서 변환할 것이다.
+그리고 이 좌표계는 EPSG:3857 이기에 이를 EPSG:4326로 변환하기 위해 [ol.proj](https://openlayers.org/en/latest/apidoc/module-ol_proj.html) 기능을 사용해서 변환할 것이다.
 ```{.javascript}
     ol.proj.transform([inputPoint[0], inputPoint[1]], "EPSG:4326", "EPSG:3857");
 ```
@@ -77,14 +77,16 @@ createMarker function 내부에 보면 위와 같은 코드가 있다. 여기서
             anchroXUnits: 'fraction',                      //anchor 의 x값 지정 단위
             anchroYUnits: 'pixels',                        //anchor 의 y값 지정 단위
             opacity: 1,                                    //마커의 불 투명도 (0~1의 실수 값)
-            src: 'http://openlayers.org/en/v3.18.2/examples/data/icon.png' //마커의 이미지 소스
+            src: 'http://openlayers.org/en/v3.18.2/examples/data/icon.png' //마커의 이미지 소스 
         }))
     });
     iconFeature.setStyle(iconStyle); //feature 에 iconStyle을 지정.
 ```
 바로 스타일을 지정해준다. 여기서 스타일은 feature 의 모양을 지정해준다. 자세히 보면 **image** 라는 속성에 new ol.style.Icon 을 지정한 것을 볼 수 있다.  
-image 에서 style.Icon 뿐만 아니라 다각형을 그리고 싶다면 다각형을 점을 찍고 싶으면 point 를 마음대로 지정하면 된다. 자세한 것은 [ol.style](https://openlayers.org/en/latest/apidoc/ol.style.html)을 참고.  
-또한 [ol.style.Icon](https://openlayers.org/en/latest/apidoc/ol.style.Icon.html) 의 경우 내부에 여러 속성을 지정해 줄 수 있는데 src는 마커의 이미지를 뜻한다. 로컬 파일에서 지정해도 되고 예시처럼 url 을 이용해 지정해도 무방하다.  
+image 에서 style.Icon 뿐만 아니라 다각형을 그리고 싶다면 다각형을 점을 찍고 싶으면 point 를 마음대로 지정하면 된다. 자세한 것은 [openLayers API doc](https://openlayers.org/en/latest/apidoc/)에서 ol.style을 검색해보시라.  
+또한 [ol.style.Icon](https://openlayers.org/en/latest/apidoc/module-ol_style_Icon-Icon.html) 의 경우 내부에 여러 속성을 지정해 줄 수 있는데 src는 마커의 이미지를 뜻한다. 로컬 파일에서 지정해도 되고 예시처럼 url 을 이용해 지정해도 무방하다.  
+마찬가지로 src 속성은 base64 string도 인식하고 혹은 위 예제처럼 url 아니면 filePath 등 여러가지를 지원한다.
+
 이렇게 만든 스타일은 feature.setStlye() 을 통해 지정할 수 있다. (예시에선 iconFeature.setStyle(iconStyle))
 
 자! 이제 우리는 feature 를 생성해고 세부적으로 style 까지 지정해주었으면 이제 뭘 해야될까?
