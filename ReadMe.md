@@ -73,5 +73,5 @@ vmap 은 vworld 맵 객체를 가질 변수이다. 즉, vmap 이라는 변수에
 
 같이 보면 좋은 문서는 다음과 같다  
 * [Vworld_2.0 API 문서](http://dev.vworld.kr/dev/v4dv_opn2dmap2guide_s001.do) - 2.0 api 문서이다. 1.0 API 문서도 바로 볼 수 있다.
-* [OpenLayer Vector](https://openlayers.org/en/latest/apidoc/ol.layer.Vector.html) - 오픈레이어스 벡터 (지도상 그리기가 필요할 때 쓰인다)
-* [OpenLayer View](https://openlayers.org/en/latest/apidoc/ol.View.html) - 오픈레이어스 뷰 (지도 정보를 가져오기 위해 쓰인다)
+* [OpenLayer Vector](https://openlayers.org/en/latest/apidoc/module-ol_layer_Vector-VectorLayer.html) - 오픈레이어스 벡터 (지도상 그리기가 필요할 때 쓰인다)
+* [OpenLayer View](https://openlayers.org/en/latest/apidoc/module-ol_View.html) - 오픈레이어스 뷰 (지도 정보를 가져오기 위해 쓰인다)
